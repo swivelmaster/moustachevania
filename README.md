@@ -4,6 +4,9 @@ Public repository for the source code from Moustachevania, available free for ed
 # What is this?
 Moustachevania is an game by Aaron Nemoyten, released publicly in a (probably permanently) unfinished state after years of on-and-off work. This repository is the original source code from the game - C# code and a few other bits and pieces, but (thus far) no Unity project, prefabs, assets, or dependencies. 
 
+The WebGL build of the game can be found here:
+https://swivelmaster.itch.io/moustachevania
+
 # What can I do with this?
 This code is provided for free for educational and noncommercial purposes. You are free to use and modify it as you wish for noncommerical and educational purposes. If you publicly release any projects that use this code, you must credit the original author (Aaron Nemoyten) and provide a link back to this repository (https://github.com/swivelmaster/moustachevania) in in-project accessible credits OR a bundled Readme file OR wherever the file is hosted (like the Description text on an itch.io page). 
 
