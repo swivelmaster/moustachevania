@@ -1,0 +1,132 @@
+# This is a creative asset provided purely as an example of how to use the dialogue code included in the Moustachevania code repository. Please do not re-release this publicly.
+
+title: Start_IntroConversation
+tags: 
+colorID: 0
+position: 158,123
+---
+<< HIDE_PLAYER >>
+<< START_MUSIC SpookyIntro >>
+<< OVERLAY_FADE black 0 >>
+<< SCENE_JUMP IntroStart >>
+<< VIGNETTE_ON >>
+<< START_AMBIENT 0 1 >>
+<< OVERLAY_FADE_OFF 3 >>
+<< ZOOM_MAIN_CAMERA .4 1 15 >>
+<< wait 2 >>
+Narrator: John Quigley Dawson, famed adventurer and collector of rare artifacts, encounters a Mysterious Figure...
+<< wait 10 >>
+<< NARRATOR_CLEAR >>
+<< BEGIN_DIALOG John MysteriousFigure >> 
+<< VIGNETTE_OFF >>
+Mysterious Figure: Greetings, sir.
+John: Um... hello. Who are you?
+Mysterious Figure: Oh, I am... nobody, just a stranger. A stranger with an offer for you.
+[[ Dare I ask... An offer? How would you know what to offer me? |Offer ]]
+===
+
+title: Offer
+tags: 
+colorID: 0
+position: 792,37
+---
+Mysterious Figure: I know all about you, John. Collector of rare and valuable artifacts.
+[[ Among the top ten world-famous adventurers according to Adventure Quarterly, actually. | WorldFamous ]]
+===
+
+title: WorldFamous
+tags: 
+colorID: 0
+position: 1134,128
+---
+Mysterious Figure: Among the top ten? You're number two, John. Number two.
+John: Yes yes, we all get it, don't rub it in.
+Mysterious Figure: What if I told you that you could set yourself apart? Become the undisputed best.
+[[ I'm listening. |Undisputed]]
+[[ Excuse me? This is ridiculous, I have places to be. |Undisputed]]
+===
+
+title: Undisputed
+tags: 
+colorID: 0
+position: 1444,128
+---
+Mysterious Figure: I can offer you access to the rarest prizes of all... Magical artifacts.
+John: In exchange for what?
+Mysterious Figure: Basically nothing. *crunch* You just have to agree to come with me.
+Mysterious Figure: Find the artifacts, bring them back, you become powerful beyond your imagination. 
+Mysterious Figure: *crunch* A legend.
+John: A legend?
+Mysterious Figure: A legend. Just say the word. *crunch*
+[[ Yes, I want to be a legend. |Legend ]]
+[[ Are you... eating? |Eating]]
+===
+
+title: Eating
+tags: 
+colorID: 0
+position: 1855,70
+---
+Mysterious Figure: No, I am definitely NOT eating.
+[[ Yes, I want to be a legend. |Legend]]
+[[ I'm pretty sure you're eating. |Eating2]]
+===
+
+title: Eating2
+tags: 
+colorID: 0
+position: 2179,57
+---
+Mysterious Figure: Nope. There is nothing in my mouth right now, I am not eating, we are now moving on.
+Mysterious Figure: Do you want to be a legend or not?
+[[ Yes, I want to be a legend. |Legend]]
+===
+
+title: Legend
+tags: 
+colorID: 0
+position: 2078,439
+---
+Mysterious Figure: Hehehe... I mean, okay.
+<< PLAY_OVERLAY_VFX realmOfFame_Intro 1 >>
+<< PLAY_SOUND realmOfFame_Intro IntroTeleportTransition .75 >>
+<< wait 1 >>
+<< OVERLAY_FADE white 1 >>
+<< STOP_AMBIENT .5 >>
+<< END_DIALOG instant >> 
+<< SCENE_JUMP realmOfFame_Intro >> 
+<< HIDE_ACTOR realmOfFame_Intro Exclamation >>
+<< wait 2 >>
+<< OVERLAY_FADE_OFF .5 >>
+<< FLIP_X realmOfFame_Intro JohnSprite >>
+<< wait .5 >>
+<< FLIP_X realmOfFame_Intro JohnSprite >>
+<< wait .5 >>
+<< FLIP_X realmOfFame_Intro JohnSprite >>
+<< wait .5 >>
+<< FLIP_X realmOfFame_Intro JohnSprite >>
+<< wait .5 >>
+<< SHOW_ACTOR realmOfFame_Intro Exclamation >>
+<< wait 1.5 >>
+<< HIDE_ACTOR realmOfFame_Intro Exclamation >>
+<< BEGIN_DIALOG John MysteriousFigure >> 
+John: My goodness, what just happened?
+Mysterious Figure: We're here... welcome to the Realm of... Treasure! 
+Mysterious Figure: ...
+Mysterious Figure: ...It's definitely called the Realm of Treasure. That's what it's called.
+John: The mind boggles... what astounding luck to have met you.
+Mysterious Figure: Haha, luck, yes.
+Mysterious Figure: This is a big place, lots to explore, plenty of magical artifacts to find.
+Mysterious Figure: Enjoy your... adventure, John Quigley Dawson.
+<< END_DIALOG >> 
+<< SPAWN_VFX realmOfFame_Intro 0 MysteriousFigure >>
+<< HIDE_ACTOR realmOfFame_Intro MysteriousFigure >>
+<< PLAY_SOUND realmOfFame_Intro mysteriousFigureDisappear .75 >>
+<< END_MUSIC SpookyIntro >>
+<< wait 1.25 >>
+<< PLAYER_WARP realmOfFame_Intro JohnSprite >>
+<< TWEEN_CAMERA_TO_PLAYER 1.3 >>
+<< wait 1.4 >>
+<< set $intro_cutscene to true >>
+<< SHOW_PLAYER >>
+===
