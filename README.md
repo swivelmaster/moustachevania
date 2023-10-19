@@ -11,7 +11,7 @@ This code is provided for free for educational and noncommercial purposes. You a
 
 If you wish you use any of this code for commercial purposes, please contact Aaron Nemoyten directly at aaron [at] nemo10.net
 
-#What is included?
+# What is included?
 Quite a lot, actually.
 
 Generalized utilities:
@@ -39,7 +39,7 @@ Extremely game-specific stuff:
 * Collection and inventory management (kind of hacky, sorry)
 * Lots and lots of UI implementation examples
 
-#Caveat For Licensing
+# Caveat For Licensing
 There are a few pieces of code in the repository that are from public sites like Unity Answers, StackOverflow, etc. These are commented specifically. Their site's respective licensing terms apply.
 
 Any assets provided as examples for code usage (example: Dialogue scripts) may not be re-released publicly and are merely provided for educational purposes.
